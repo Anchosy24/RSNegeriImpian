@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Jadwal Dokter RS Negeri Impian</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <center>
+                <span>
+                    <a href="">
+                        <img src="image/Logo.png" alt="RS Negeri Impian">
+                    </a>
+                </span>
+            </center>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-12 bg-mute">
+                    <h1 class="">Informasi Jadwal Dokter</h1>
+                    <!-- Breadcrumb -->
+                    <nav class="d-flex">
+                        <h6 class="mb-0">
+                            <a href="index.html" class="text-reset">Home</a>
+                            <span>></span>
+                            <a href="jadwal.html" class="text-reset"><u>Jadwal Dokter</u></a>
+                        </h6>
+                    </nav>
+                    <!-- Breadcrumb -->
+                </div>    
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container-fluid">
+            <!--table-->
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 bg-mute">
+                    <center>
+                        <h2>Jadwal Dokter Semua Layanan</h2>
+                    </center>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 bg-mute">
+                    <center>
+                        <label>Layanan</label>
+                    </center>
+                    <select id="layanan" class="form-control" name="layanan">
+                        <option value="">Silahkan Pilih</option>
+                        <option value="POLI GIGI">POLI GIGI</option>
+                        <option value="POLI THT">POLI THT</option>
+                        <option value="POLI IBU&ANAK">POLI IBU & ANAK</option>
+                        <option value="POLI MATA">POLI MATA</option>
+                        <option value="POLI UMUM">POLI UMUM</option>
+                        <option value="POLI BEDAH">POLI BEDAH</option>
+                        <option value="POLI KULIT&KELAMIN">POLI KULIT & KELAMIN</option>
+                    </select>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 bg-mute">
+                    <center>
+                        <label>Nama Dokter</label>
+                    </center>
+                    <input type="text" id="myInput" class="form-control" name="kata" onkeyup="myFunction" placeholder="Ketik nama dokter disini">
+                </div>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 bg-mute pt-4">
+                    <center>
+                        <button id="cari" class="btn" name="cari">Tampilkan</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table id="myTable" class="table">
+                <tr class="table-header">
+                    <th>Nama Dokter</th>
+                    <th>Layanan</th>
+                    <th>Senin</th>
+                    <th>Selasa</th>
+                    <th>Rabu</th>
+                    <th>Kamis</th>
+                    <th>Jum'at</th>
+                    <th>Sabtu</th>
+                    <th>Minggu</th>
+                </tr>
+                <tr>
+                    <td>Drg. Andina Alia Latief</td>
+                    <td>Poli Gigi</td>
+                    <td></td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>13.30-16.00</td>
+                    <td></td>
+                    <td>07.30-10.30</td>
+                </tr>
+                <tr>
+                    <td>Drg. Nina Miranti</td>
+                    <td>Poli Gigi</td>
+                    <td>07.30-10.30</td>
+                    <td></td>
+                    <td>13.00-16.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                </tr>
+                    <tr>
+                        <td>Dr. Triana Darmayanti Akbar, SpA</td>
+                        <td>Poli Ibu & Anak</td>
+                        <td></td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td></td>
+                        <td>08.00-12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Rachmat Nikmat Tjaja, SpA</td>
+                        <td>Poli Ibu & Anak</td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td>08.00-12.00</td>
+                        <td></td>
+                        <td></td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Lestari Handayani, Mkes, SpTHT-KL</td>
+                        <td>Poli THT</td>
+                        <td></td>
+                        <td>13.00-16.00</td>
+                        <td>08.00-12.00</td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Fransiskus Harf Poluan, SpTHT-KL</td>
+                        <td>Poli THT</td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>07.30-10.30</td>
+                        <td>08.00-12.00</td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Arya Wiranata</td>
+                        <td>Poli Umum</td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td>08.00-12.00</td>
+                        <td></td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. Febrina Dwiyanti</td>
+                        <td>Poli Umum</td>
+                        <td></td>
+                        <td>08.00-12.00</td>
+                        <td></td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Dr. M. Nazif A, SpB</td>
+                        <td>Poli Bedah</td>
+                        <td>08.00-12.00</td>
+                        <td>07.30-10.30</td>
+                        <td></td>
+                        <td>13.00-16.00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                <tr>
+                    <td>Dr. Ahmad Affandi, SpB</td>
+                    <td>Poli Bedah</td>
+                    <td></td>
+                    <td>13.00-16.00</td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                    <td>07.30-10.30</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dr. Wita Jayanti, SpM</td>
+                    <td>Poli Mata</td>
+                    <td>07.30-10.30</td>
+                    <td></td>
+                    <td></td>
+                    <td>13.00-16.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>08.00-12.00</td>
+                    </tr>
+                <tr>
+                    <td>Dr. Nani H.Widodo, SpM</td>
+                    <td>Poli Mata</td>
+                    <td>13.00-16.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                    <td>07.30-10.30</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dr. Indrarini, SpKK</td>
+                    <td>Poli Kulit & Kelamin</td>
+                    <td></td>
+                    <td>07.30-10.30</td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                    <td>13.30-16.00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dr. Dwi Ro Santi, SpKK</td>
+                    <td>Poli Kulit & Kelamin</td>
+                    <td>08.00-12.00</td>
+                    <td></td>
+                    <td></td>
+                    <td>07.30-10.30</td>
+                    <td></td>
+                    <td>13.00-16.00</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-8 col-sm-12" id="Kontak">
+                    <h1 class="text-uppercase font-weight-bold">Hubungi Kami</h1>
+                    <p>Telp. 023-4567899 <br> Fax: 021-5710249 </p>
+                    <br>
+                    <p>Jalan Garnisun No.1, Jalan Jend.Sudirman, RT.5/RW.4, Karet Semanggi, Kec.Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930
+                    </p>
+                    <br>
+                    <p>marketing@rsnegeriimpian.co.id <br> customer.relation@rsnegeriimpian.co.id </p>
+                </div>
+                <div class="col-lg-4 col-md-8 col-sm-12">
+                    <a href="">
+                        <img src="image/whatsapp.png" alt="WA">
+                    </a>
+                    <a href="">
+                        <img src="image/facebook.png" alt="FB">
+                    </a>
+                    <a href="">
+                        <img src="image/instagram.png" alt="IG">
+                    </a>
+                    <a href="">
+                        <img src="image/twitter.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center">© 2022 Copyright: RSNegeriImpian</div>
+    </footer>
+
+</body>
+</html>
